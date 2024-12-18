@@ -1,0 +1,523 @@
+/* Estilos generales */
+html {scr}
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001932;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+header .logo img {
+    max-height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header .cta a {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header .cta a:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.destacado {
+    background-image: url('imagenes/equipo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+/* Sección destacado */
+/*.destacado {
+    background-color: #001932;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}*/
+
+.destacado h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.destacado p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.btn-cta {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Sección cursos destacados */
+.cursos-destacados {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.cursos-destacados h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.cursos-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.cursos-carousel .curso {
+    width: 100%;
+    position: relative;
+}
+
+.cursos-carousel .curso img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+}
+
+.cursos-carousel .curso:hover img {
+    transform: scale(1.05);
+}
+
+.cursos-carousel .curso-texto {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.5s;
+}
+
+.cursos-carousel .curso:hover .curso-texto {
+    opacity: 1;
+}
+
+/* Sección beneficios */
+.beneficios .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.beneficios .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección testimonios */
+.testimonios {
+    background-color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    background-color: #001932;
+    color: #fff;
+    padding: 30px;
+    margin: 0 auto 30px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.testimonial p:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #001932;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer .social-icons {
+    margin-bottom: 20px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #007bff;
+}
+
+.testimonial p:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: #001932;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer .social-icons {
+    margin-bottom: 20px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #007bff;
+}
+
+.form-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.form-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-section input,
+.form-section textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-section button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-section button:hover {
+    background-color: #0056b3;
+}
+
+.cursos-catalog {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cursos-catalog h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.cursos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.curso {
+    background-color: #f9f9f9; /* Fondo neutro */
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+    position: relative;
+    padding-left: 20px; /* Padding izquierdo para centrar el texto */
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.curso h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.curso p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.curso:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+    .beneficios-carousel {
+        padding: 0 5%;
+    }
+
+    .curso {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curso {
+        width: 100%;
+    }
+
+    .btn-ver-todos {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+    }
+
+    .cta {
+        margin-top: 10px;
+    }
+
+    .beneficios-carousel {
+        padding: 0;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        transform: scale3d(.9, .9, .9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        transform: scale3d(.97, .97, .97);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.beneficios h2, .beneficio h3, .beneficio p {
+    animation: fadeInDown 1s ease-out;
+}
+
+.beneficios-carousel .beneficio {
+    animation: bounceIn 1s ease-out;
+}
+
+.beneficios-carousel .slick-prev, .beneficios-carousel .slick-next {
+    color: #001932;
+}
+
+.beneficios-carousel .slick-prev:hover, .beneficios-carousel .slick-next:hover {
+    color: #007bff;
+} 
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Estilos personalizados */
+.categoria {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.categoria h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #001932; /* Color principal */
+}
+
+.cursos-carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.curso-card {
+    flex: 0 0 20%;
+    margin: 0 10px;
+}
+
+.curso {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.curso:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.curso-texto {
+    padding: 20px;
+}
+
+.curso-texto h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #001932; /* Color principal */
+}
+
+.curso-texto p {
+    font-size: 18px;
+    color: #555; /* Gris oscuro */
+}
+
+.btn-ver-mas {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background-color: #0056b3;
+    color: #fff;
+}

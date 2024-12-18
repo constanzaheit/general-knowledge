@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de Cursos</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagenes/uadelogo.png" alt="Logo de la Universidad">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalog.html">Cursos</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="informatica.html">Informática y Tecnología</a></li>
+            </ul>
+        </nav>
+        <div class="cta">
+            <a href="login.html" id="btn-iniciar-sesion">Iniciar Sesión</a>
+            <a href="register.html">Registrarse</a>
+        </div>
+    </header>
+    <main id="catalog">
+        <section class="categoria">
+            <div class="container">
+                <h2>Cursos de Informática</h2>
+                <div class="row cursos-container">
+                    <!-- Curso cards -->
+                    <div class="col-md-4 curso">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Programación Web</h5>
+                                <p class="card-text">Descripción breve del curso...</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Agrega aquí más cursos similares -->
+                    <!-- Ejemplo -->
+                    <!-- <div class="col-md-4 curso">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Nombre del curso</h5>
+                                <p class="card-text">Descripción breve del curso...</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <h2>Redes Sociales</h2>
+            <p>Síguenos en nuestras redes sociales oficiales:</p>
+            <a href="https://www.facebook.com/uadeoficial" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/uadeoficial" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/uadeoficial" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/school/uade" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/user/UADEvideos" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Custom JS for curso cards and Slick Carousel -->
+    <script>
+        $(document).ready(function() {
+            const cursos = [
+                // Course data
+                {
+                    titulo: "Programación Web",
+                    descripcion: "Descripción breve del curso..."
+                },
+                {
+                    titulo: "Bases de Datos",
+                    descripcion: "Descripción breve del curso..."
+                },
+                {
+                    titulo: "Seguridad Informática",
+                    descripcion: "Descripción breve del curso..."
+                },
+                {
+                    titulo: "Inteligencia Artificial",
+                    descripcion: "Descripción breve del curso..."
+                },
+                {
+                    titulo: "Desarrollo de Aplicaciones Móviles",
+                    descripcion: "Descripción breve del curso..."
+                }
+                // Agrega más cursos aquí si es necesario
+            ];
+
+            const cursosContainer = $('.cursos-container');
+
+            function renderCursos(cursos) {
+                cursosContainer.empty();
+                cursos.forEach(curso => {
+                    const cursoElement = $(`
+                        <div class="col-md-4 curso">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">${curso.titulo}</h5>
+                                    <p class="card-text">${curso.descripcion}</p>
+                                    <a href="#" class="btn btn-primary">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                    cursosContainer.append(cursoElement);
+                });
+
+                // Initialize Slick Carousel
+                $('.cursos-container').slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: true,
+                    arrows: true,
+                    responsive: [
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 2
+                            }
+                        },
+                        {
+                            breakpoint: 576,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+                });
+            }
+
+            renderCursos(cursos);
+        });
+    </script>
+</body>
+</html>
+
+
+
